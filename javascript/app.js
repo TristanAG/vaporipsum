@@ -2,18 +2,18 @@ $( 'document' ).ready( function(){
 
   $( "button" ).click(function() {
     paragraphNum = $( '#paragraph-num' ).val()
-    test()
+    $( '#ipsum' ).html(makeManyParagraphs(paragraphNum))
   })
 
   function test() {
-    $( '#ipsum' ).html('narb')
+    //$( '#ipsum' ).html('narb')
   }
 
   //$( '#ipsum' ).html(makeManyParagraphs())
 
-  function makeManyParagraphs() {
+  function makeManyParagraphs(paraNum) {
     multiParagraph = ''
-    for (k = 0; k < 3; k++){
+    for (k = 0; k < paraNum; k++){
       multiParagraph += makeParagraph()
     }
     return multiParagraph
