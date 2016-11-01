@@ -420,21 +420,16 @@ there.
 header{
   font-family: "times new roman";
   color: #ff87af;
-
   margin-bottom: 14px;
-
 }
 
 h1{
-
   letter-spacing: .3em;
   margin-bottom: 2px;
 }
 
 small{
-
   font-size: 1em;
-
 }
 
 p{
@@ -443,4 +438,14 @@ p{
 
 img{
   max-width: 100%;
+}
+
+input[type="text"]{
+  border: 1px solid #ff87af;
+  color: #ff87af;
+}
+
+input[type="text"]:focus{
+  border: 1px solid #ff87af;
+  color: #ff87af;
 }

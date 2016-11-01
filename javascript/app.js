@@ -28,7 +28,7 @@ $( 'document' ).ready( function(){
   }
 
   function makeSentace() {
-    words = ['vaporwave', 'a e s t h e t i c', 'meme', 'You\'ve got mail', 'remember summer days', 'mallsoft', 'where am i', 'I M D R E A M I N G', 'where are you going', '100% satisfaction guaranteed']
+    words = ['vaporwave', 'aesthetic', 'meme', 'you\'ve got mail', 'remember summer days', 'mallsoft', 'where am i', 'im dreaming', 'where are you going', '100% satisfaction guaranteed']
 
     sentance = ''
     for(i = 0; i < 10; i++){
