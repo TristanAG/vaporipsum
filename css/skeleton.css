@@ -417,12 +417,24 @@ there.
 /* Larger than Desktop HD */
 @media (min-width: 1200px) {}
 
+header{
+  font-family: "times new roman";
+  color: #ff87af;
 
+  margin-bottom: 14px;
+
+}
 
 h1{
-  font-family: "times new roman";
+
   letter-spacing: .3em;
-  color: #ff87af;
+  margin-bottom: 2px;
+}
+
+small{
+
+  font-size: 1em;
+
 }
 
 p{

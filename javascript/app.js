@@ -1,10 +1,19 @@
 $( 'document' ).ready( function(){
 
-  $( '#ipsum' ).html(makeManyParagraphs())
+  $( "button" ).click(function() {
+    paragraphNum = $( '#paragraph-num' ).val()
+    test()
+  })
+
+  function test() {
+    $( '#ipsum' ).html('narb')
+  }
+
+  //$( '#ipsum' ).html(makeManyParagraphs())
 
   function makeManyParagraphs() {
     multiParagraph = ''
-    for (k = 0; k < 4; k++){
+    for (k = 0; k < 3; k++){
       multiParagraph += makeParagraph()
     }
     return multiParagraph
