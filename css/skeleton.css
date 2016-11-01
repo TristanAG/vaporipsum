@@ -417,10 +417,18 @@ there.
 /* Larger than Desktop HD */
 @media (min-width: 1200px) {}
 
-h5{
+
+
+h1{
+  font-family: "times new roman";
   letter-spacing: .3em;
+  color: #ff87af;
 }
 
 p{
   letter-spacing: .08em;
+}
+
+img{
+  max-width: 100%;
 }

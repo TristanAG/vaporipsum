@@ -1,6 +1,6 @@
 $( 'document' ).ready( function(){
 
-  $( '.sentance' ).html(makeManyParagraphs())
+  $( '#ipsum' ).html(makeManyParagraphs())
 
   function makeManyParagraphs() {
     multiParagraph = ''
