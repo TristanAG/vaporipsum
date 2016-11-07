@@ -179,7 +179,7 @@ input[type="button"] {
   font-weight: 600;
   line-height: 38px;
   letter-spacing: .1rem;
-  text-transform: uppercase;
+
   text-decoration: none;
   white-space: nowrap;
   background-color: transparent;
@@ -421,6 +421,7 @@ header{
   font-family: "times new roman";
   color: #ff87af;
   margin-bottom: 14px;
+  text-align: left;
 }
 
 h1{
@@ -448,4 +449,31 @@ input[type="text"]{
 input[type="text"]:focus{
   border: 1px solid #ff87af;
   color: #ff87af;
+}
+
+::selection {
+    color: white;
+    background: #FE819C;
+}
+
+.toggle-plus{
+  color: #E6738B;
+  font-size: 2.4em;
+}
+.toggle-minus{
+  color: #E6738B;
+  font-size: 2.4em;
+}
+
+.toggle-plus:hover{
+  font-weight: bold;
+  background-color: #F3C8D1;
+  color: white;
+  cursor: pointer;
+}
+.toggle-minus:hover{
+  font-weight: bold;
+  background-color: #F3C8D1;
+  color: white;
+  cursor: pointer;
 }

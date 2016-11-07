@@ -5,15 +5,9 @@ $( 'document' ).ready( function(){
     $( '#ipsum' ).html(makeManyParagraphs(paragraphNum))
   })
 
-  function test() {
-    //$( '#ipsum' ).html('narb')
-  }
-
-  //$( '#ipsum' ).html(makeManyParagraphs())
-
   function makeManyParagraphs(paraNum) {
     multiParagraph = ''
-    for (k = 0; k < paraNum; k++){
+    for (var i = 0; i < paraNum; i++){
       multiParagraph += makeParagraph()
     }
     return multiParagraph
@@ -21,7 +15,7 @@ $( 'document' ).ready( function(){
 
   function makeParagraph() {
     paragraph = ''
-    for (j = 0; j < 4; j++){
+    for (var i = 0; i < 4; i++){
       paragraph += makeSentace()
     }
     return '<p>' + paragraph + '</p>'
@@ -31,7 +25,7 @@ $( 'document' ).ready( function(){
     words = ['vaporwave', 'aesthetic', 'meme', 'you\'ve got mail', 'remember summer days', 'mallsoft', 'where am i', 'im dreaming', 'where are you going', '100% satisfaction guaranteed']
 
     sentance = ''
-    for(i = 0; i < 10; i++){
+    for(var i = 0; i < 10; i++){
       num = Math.floor(Math.random()*10)
       if(i < 9){
         sentance += words[num] + ' '
