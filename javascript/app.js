@@ -26,9 +26,8 @@ $( 'document' ).ready( function(){
   })
 
   function alterSpacing(){
-    vaporIpsum = vaporReference.replace('<br><br>', '$')
 
-
+    vaporIpsum = vaporReference.split('<br><br>').join('$')
 
     if (count == 1){
       vaporIpsum = vaporIpsum.split('').join('&nbsp;')
@@ -43,7 +42,7 @@ $( 'document' ).ready( function(){
       vaporIpsum = vaporIpsum.split('').join('&nbsp;&nbsp;&nbsp;&nbsp;')
     }
 
-    vaporIpsum = vaporIpsum.replace('$', '<br><br>')
+    vaporIpsum = vaporIpsum.split('$').join('<br><br>')
 
     //resetLineBreaks()
 
