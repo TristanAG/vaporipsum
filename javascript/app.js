@@ -1,9 +1,48 @@
 $( 'document' ).ready( function(){
 
-  $( "button" ).click(function() {
+  vaporIpsum = '';
+  vaporReference = '';
+  count = 0
+
+  $( ".ipsum-button" ).click(function() {
     paragraphNum = $( '#paragraph-num' ).val()
-    $( '#ipsum' ).html(makeManyParagraphs(paragraphNum))
+    vaporIpsum = makeManyParagraphs(paragraphNum)
+    vaporReference = vaporIpsum
+    $( '#ipsum' ).html(vaporIpsum)
   })
+
+  $( ".toggle-plus" ).click(function() {
+    if(count < 4){
+      count++
+      alterSpacing()
+    }
+  })
+  $( '.toggle-minus').click(function() {
+    if(count > 0){
+      count--
+      alterSpacing()
+    }
+  })
+
+  function alterSpacing(){
+    vaporIpsum = vaporReference
+
+    if (count == 1){
+      vaporIpsum = vaporIpsum.split('').join('&nbsp;')
+    }
+    if (count == 2){
+      vaporIpsum = vaporIpsum.split('').join('&nbsp;&nbsp;')
+    }
+    if (count == 3){
+      vaporIpsum = vaporIpsum.split('').join('&nbsp;&nbsp;&nbsp;')
+    }
+    if (count == 4){
+      vaporIpsum = vaporIpsum.split('').join('&nbsp;&nbsp;&nbsp;&nbsp;')
+    }
+
+    $( '#ipsum' ).html(vaporIpsum)
+    console.log(count)
+  }
 
   function makeManyParagraphs(paraNum) {
     multiParagraph = ''
@@ -18,7 +57,7 @@ $( 'document' ).ready( function(){
     for (var i = 0; i < 4; i++){
       paragraph += makeSentace()
     }
-    return '<p>' + paragraph + '</p>'
+    return paragraph
   }
 
   function makeSentace() {
