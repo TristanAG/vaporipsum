@@ -8,6 +8,7 @@ $( 'document' ).ready( function(){
     paragraphNum = $( '#paragraph-num' ).val()
     vaporIpsum = makeManyParagraphs(paragraphNum)
     vaporReference = vaporIpsum
+
     $( '#ipsum' ).html(vaporIpsum)
   })
 
@@ -28,6 +29,7 @@ $( 'document' ).ready( function(){
     vaporIpsum = vaporReference
 
     if (count == 1){
+      
       vaporIpsum = vaporIpsum.split('').join('&nbsp;')
     }
     if (count == 2){
@@ -40,8 +42,10 @@ $( 'document' ).ready( function(){
       vaporIpsum = vaporIpsum.split('').join('&nbsp;&nbsp;&nbsp;&nbsp;')
     }
 
+    //resetLineBreaks()
+
     $( '#ipsum' ).html(vaporIpsum)
-    console.log(count)
+
   }
 
   function makeManyParagraphs(paraNum) {
