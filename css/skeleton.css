@@ -454,6 +454,7 @@ input[type="text"]:focus{
 ::selection {
     color: white;
     background: #FE819C;
+
 }
 
 .toggle-plus{
@@ -476,4 +477,9 @@ input[type="text"]:focus{
   background-color: #F3C8D1;
   color: white;
   cursor: pointer;
+}
+
+#ipsum{
+  font-size: .8em;
+  padding: 13.333px;
 }

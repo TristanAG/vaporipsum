@@ -1,10 +1,12 @@
 $( 'document' ).ready( function(){
 
   vaporIpsum = '';
-  vaporReference = '';
+  vaporReference = ''
   count = 0
+  buttonsAreActive = false
 
   $( ".ipsum-button" ).click(function() {
+    buttonsAreActive = true
     paragraphNum = $( '#paragraph-num' ).val()
     vaporIpsum = makeManyParagraphs(paragraphNum)
     vaporReference = vaporIpsum
@@ -13,13 +15,13 @@ $( 'document' ).ready( function(){
   })
 
   $( ".toggle-plus" ).click(function() {
-    if(count < 4){
+    if(count < 4 && buttonsAreActive){
       count++
       alterSpacing()
     }
   })
   $( '.toggle-minus').click(function() {
-    if(count > 0){
+    if(count > 0 && buttonsAreActive){
       count--
       alterSpacing()
     }
