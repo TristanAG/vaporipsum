@@ -57,7 +57,7 @@ $( 'document' ).ready( function(){
     for (var i = 0; i < 4; i++){
       paragraph += makeSentace()
     }
-    return paragraph
+    return paragraph + '<br><br>'
   }
 
   function makeSentace() {
