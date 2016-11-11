@@ -48,10 +48,9 @@ $( 'document' ).ready( function(){
     for(var i = count; i >= 1; i--){
       spaces += '&nbsp;'
     }
-    vaporIpsum = vaporIpsum.split('').join(spaces)
-    vaporIpsum = vaporIpsum.split('$').join('<br><br>')
+    vaporIpsum = vaporIpsum.split('').join(spaces).split('$').join('<br><br>')
 
-    $( '#ipsum' ).html(vaporIpsum)
+    $( '#ipsum' ).html(spaces + vaporIpsum)
   }
 
   function makeManyParagraphs(paraNum) {
