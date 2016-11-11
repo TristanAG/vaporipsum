@@ -44,27 +44,14 @@ $( 'document' ).ready( function(){
   function alterSpacing(){
 
     vaporIpsum = vaporReference.split('<br><br>').join('$')
-
-    //this can be made waaaay better
-    if (count == 1){
-      vaporIpsum = vaporIpsum.split('').join('&nbsp;')
+    var spaces = ''
+    for(var i = count; i >= 1; i--){
+      spaces += '&nbsp;'
     }
-    if (count == 2){
-      vaporIpsum = vaporIpsum.split('').join('&nbsp;&nbsp;')
-    }
-    if (count == 3){
-      vaporIpsum = vaporIpsum.split('').join('&nbsp;&nbsp;&nbsp;')
-    }
-    if (count == 4){
-      vaporIpsum = vaporIpsum.split('').join('&nbsp;&nbsp;&nbsp;&nbsp;')
-    }
-
+    vaporIpsum = vaporIpsum.split('').join(spaces)
     vaporIpsum = vaporIpsum.split('$').join('<br><br>')
 
-    //resetLineBreaks()
-
     $( '#ipsum' ).html(vaporIpsum)
-
   }
 
   function makeManyParagraphs(paraNum) {
