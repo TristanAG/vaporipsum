@@ -27,6 +27,20 @@ $( 'document' ).ready( function(){
     }
   })
 
+  function shuffle(array){
+    var m = array.length, t, i
+
+    while (m) {
+      i = Math.floor(Math.random() * m--)
+
+      t = array[m]
+      array[m] = array[i]
+      array[i] = t
+    }
+
+    return array.join(' ')
+  }
+
   function alterSpacing(){
 
     vaporIpsum = vaporReference.split('<br><br>').join('$')
@@ -72,15 +86,15 @@ $( 'document' ).ready( function(){
   function makeSentace() {
     words = ['vaporwave', 'aesthetic', 'meme', 'you\'ve got mail', 'remember summer days', 'mallsoft', 'where am i', 'im dreaming', 'where are you going', '100% satisfaction guaranteed']
 
-    sentance = ''
-    for(var i = 0; i < 10; i++){
-      num = Math.floor(Math.random()*10)
-      if(i < 9){
-        sentance += words[num] + ' '
-      } else if( i == 9) {
-        sentance += words[num] + '. '
-      }
-    }
+    sentance = shuffle(words)
+    // for(var i = 0; i < 10; i++){
+    //   num = Math.floor(Math.random()*10)
+    //   if(i < 9){
+    //     sentance += words[num] + ' '
+    //   } else if( i == 9) {
+    //     sentance += words[num] + '. '
+    //   }
+    // }
 
     return sentance
   }
