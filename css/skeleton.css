@@ -431,7 +431,7 @@ h1{
   font-size: 3.8em;
   margin-bottom: 2px;
   line-height: 62px;
-  opacity: .4;
+  opacity: .6;
 }
 
 small{
@@ -445,13 +445,13 @@ p{
 }
 
 img{
-
+  opacity: .8;
   width: 440px;
 
+  border: 2px solid #A67AFA;
+
   max-width: 100%;
-  -webkit-box-shadow: 6px 10px 25px -14px rgba(0,0,0,0.75);
--moz-box-shadow: 6px 10px 25px -14px rgba(0,0,0,0.75);
-box-shadow: 6px 10px 25px -14px rgba(0,0,0,0.75);
+
 }
 
 ::selection {
@@ -460,16 +460,7 @@ box-shadow: 6px 10px 25px -14px rgba(0,0,0,0.75);
 
 }
 
-input[type="text"]{
-  border: 1px solid #51A5FC;
-  color: #81858c;
-  margin: 0px;
-}
 
-input[type="text"]:focus{
-  border: 1px solid #A67AFA;
-  color: #81858c;
-}
 
 
 .toggle-buttons{
@@ -485,17 +476,17 @@ input[type="text"]:focus{
 
   color: #A67AFA;
   font-size: 2.8em;
-  
 
-  /*margin-left: 20px;
-  margin-right: 20px;*/
+
+  margin-left: 20px;
+  margin-right: 20px;
 }
 .toggle-minus{
   color: #A67AFA;
   font-size: 2.8em;
 
-  /*margin-left: 20px;
-  margin-right: 20px;*/
+  margin-left: 20px;
+  margin-right: 20px;
 }
 
 .toggle-plus:hover{

@@ -1,6 +1,7 @@
 $( 'document' ).ready( function(){
 
-  vaporIpsum = '';
+
+  vaporIpsum = ''
   vaporReference = ''
   count = 0
   buttonsAreActive = false
@@ -38,7 +39,7 @@ $( 'document' ).ready( function(){
       array[i] = t
     }
 
-    return array.join(' ')
+    return array.join(' ') + ' '
   }
 
   function alterSpacing(){
@@ -70,17 +71,34 @@ $( 'document' ).ready( function(){
   }
 
   function makeSentace() {
-    words = ['vaporwave', 'aesthetic', 'meme', 'you\'ve got mail', 'remember summer days', 'mallsoft', 'where am i', 'im dreaming', 'where are you going', '100% satisfaction guaranteed']
+    words = [ 'vaporwave',
+              'aesthetic',
+              '1999',
+              'relax',
+              'everything will be ok',
+              'sleeping in',
+              'meme',
+              'you\'ve got mail',
+              'regular scheduled programming',
+              'nintendo',
+              'dreamcast',
+              'playstation',
+              'nightdrive',
+              'snick',
+              'powerglove',
+              'cartridge',
+              'vhs',
+              'vcr',
+              'remember summer days',
+              'mallsoft',
+              'the future is now',
+              'crystal pepsi',
+              'where am i',
+              'im dreaming',
+              'where are you going',
+              'satisfaction guaranteed']
 
     sentance = shuffle(words)
-    // for(var i = 0; i < 10; i++){
-    //   num = Math.floor(Math.random()*10)
-    //   if(i < 9){
-    //     sentance += words[num] + ' '
-    //   } else if( i == 9) {
-    //     sentance += words[num] + '. '
-    //   }
-    // }
 
     return sentance
   }
