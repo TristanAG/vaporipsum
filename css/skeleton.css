@@ -171,13 +171,13 @@ input[type="submit"],
 input[type="reset"],
 input[type="button"] {
   display: inline-block;
-  height: 38px;
+  /*height: 38px;*/
   padding: 0 30px;
   color: #555;
   text-align: center;
   font-size: 11px;
   font-weight: 600;
-  line-height: 38px;
+  /*line-height: 10px;*/
   letter-spacing: .1rem;
 
   text-decoration: none;
@@ -428,7 +428,10 @@ header{
 h1{
   margin-top: 10px;
   letter-spacing: .3em;
+  font-size: 3.8em;
   margin-bottom: 2px;
+  line-height: 62px;
+  opacity: .4;
 }
 
 small{
@@ -442,12 +445,25 @@ p{
 }
 
 img{
+
+  width: 440px;
+
   max-width: 100%;
+  -webkit-box-shadow: 6px 10px 25px -14px rgba(0,0,0,0.75);
+-moz-box-shadow: 6px 10px 25px -14px rgba(0,0,0,0.75);
+box-shadow: 6px 10px 25px -14px rgba(0,0,0,0.75);
+}
+
+::selection {
+    color: white;
+    background: #A67AFA;
+
 }
 
 input[type="text"]{
   border: 1px solid #51A5FC;
   color: #81858c;
+  margin: 0px;
 }
 
 input[type="text"]:focus{
@@ -455,31 +471,43 @@ input[type="text"]:focus{
   color: #81858c;
 }
 
-::selection {
-    color: white;
-    background: #FE819C;
 
+.toggle-buttons{
+  color: #A67AFA;
+  border: 2px solid #A67AFA;
+  font-size: 1.5em;
+  width: 20px;
+  height: 38px;
 }
+
 
 .toggle-plus{
-  color: #7153FB;
-  font-size: 2.4em;
+
+  color: #A67AFA;
+  font-size: 2.8em;
+  
+
+  /*margin-left: 20px;
+  margin-right: 20px;*/
 }
 .toggle-minus{
-  color: #7153FB;
-  font-size: 2.4em;
+  color: #A67AFA;
+  font-size: 2.8em;
+
+  /*margin-left: 20px;
+  margin-right: 20px;*/
 }
 
 .toggle-plus:hover{
   font-weight: bold;
 
-  color: #5ECEFA;
+  color: #81858c;
   cursor: pointer;
 }
 .toggle-minus:hover{
   font-weight: bold;
 
-  color: #5ECEFA;
+  color: #81858c;
   cursor: pointer;
 }
 
@@ -487,4 +515,31 @@ input[type="text"]:focus{
   font-size: .8em;
 
   color: #81858c;
+}
+
+input[type="text"]{
+  border: 2px solid #A67AFA;
+}
+input[type="text"]:focus{
+  border: 2px solid #A67AFA;
+}
+
+
+.ipsum-button{
+  -webkit-box-shadow: 6px 10px 25px -14px rgba(0,0,0,0.75);
+-moz-box-shadow: 6px 10px 25px -14px rgba(0,0,0,0.75);
+box-shadow: 6px 10px 25px -14px rgba(0,0,0,0.75);
+width: 440px;
+  height: 40px;
+  max-width: 100%;
+  font-size: 1.1em;
+  border: 2px solid #A67AFA;
+  transition: .5s;
+  color: #A67AFA;
+}
+
+.ipsum-button:hover{
+  background-color: #81858c;
+
+  color: white;
 }

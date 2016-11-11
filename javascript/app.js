@@ -31,6 +31,7 @@ $( 'document' ).ready( function(){
 
     vaporIpsum = vaporReference.split('<br><br>').join('$')
 
+    //this can be made waaaay better
     if (count == 1){
       vaporIpsum = vaporIpsum.split('').join('&nbsp;')
     }
