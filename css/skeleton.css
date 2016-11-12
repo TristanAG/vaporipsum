@@ -428,7 +428,7 @@ header{
 h1{
   margin-top: 10px;
   letter-spacing: .3em;
-  font-size: 3.8em;
+  font-size: 1.8em;
   margin-bottom: 2px;
   line-height: 62px;
   opacity: .6;
@@ -509,6 +509,7 @@ img{
 }
 
 input[type="text"]{
+  opacity: .7;
   border: 2px solid #A67AFA;
 }
 input[type="text"]:focus{
@@ -517,6 +518,7 @@ input[type="text"]:focus{
 
 
 .ipsum-button{
+  opacity: .7;
   -webkit-box-shadow: 6px 10px 25px -14px rgba(0,0,0,0.75);
 -moz-box-shadow: 6px 10px 25px -14px rgba(0,0,0,0.75);
 box-shadow: 6px 10px 25px -14px rgba(0,0,0,0.75);
