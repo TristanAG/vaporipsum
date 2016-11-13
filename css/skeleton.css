@@ -459,7 +459,11 @@ img{
     background: #A67AFA;
 
 }
+::-moz-selection {
+  color: white;
 
+    background: #A67AFA;
+}
 
 
 
