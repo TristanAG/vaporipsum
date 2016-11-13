@@ -1,12 +1,11 @@
 $( 'document' ).ready( function(){
 
-
   vaporIpsum = ''
   vaporReference = ''
-  count = 0
   buttonsAreActive = false
 
   $( ".ipsum-button" ).click(function() {
+    count = 0
     buttonsAreActive = true
     paragraphNum = $( '#paragraph-num' ).val()
     vaporIpsum = makeManyParagraphs(paragraphNum)
@@ -28,32 +27,6 @@ $( 'document' ).ready( function(){
     }
   })
 
-  function shuffle(array){
-    var m = array.length, t, i
-
-    while (m) {
-      i = Math.floor(Math.random() * m--)
-
-      t = array[m]
-      array[m] = array[i]
-      array[i] = t
-    }
-
-    return array.join(' ') + ' '
-  }
-
-  function alterSpacing(){
-
-    vaporIpsum = vaporReference.split('<br><br>').join('$')
-    var spaces = ''
-    for(var i = count; i >= 1; i--){
-      spaces += '&nbsp;'
-    }
-    vaporIpsum = vaporIpsum.split('').join(spaces).split('$').join('<br><br>')
-
-    $( '#ipsum' ).html(spaces + vaporIpsum)
-  }
-
   function makeManyParagraphs(paraNum) {
     multiParagraph = ''
     for (var i = 0; i < paraNum; i++){
@@ -63,14 +36,6 @@ $( 'document' ).ready( function(){
   }
 
   function makeParagraph() {
-    paragraph = ''
-    for (var i = 0; i < 4; i++){
-      paragraph += makeSentace()
-    }
-    return paragraph + '<br><br>'
-  }
-
-  function makeSentace() {
     words = [ 'vaporwave',
               'aesthetic',
               '1999',
@@ -86,7 +51,11 @@ $( 'document' ).ready( function(){
               'nightdrive',
               'snick',
               'powerglove',
-              'cartridge',
+              'lost cartridge',
+              'infinite reverie',
+              'new game',
+              'aol',
+              'ultra 64',
               'vhs',
               'vcr',
               'remember summer days',
@@ -100,6 +69,32 @@ $( 'document' ).ready( function(){
 
     sentance = shuffle(words)
 
-    return sentance
+    return sentance.slice(0,36).join(' ') + ' ' + '<br><br>'
+  }
+
+  function shuffle(array){
+    var m = array.length, t, i
+
+    while (m) {
+      i = Math.floor(Math.random() * m--)
+
+      t = array[m]
+      array[m] = array[i]
+      array[i] = t
+    }
+
+    return array
+  }
+
+  function alterSpacing(){
+
+    vaporIpsum = vaporReference.split('<br><br>').join('$')
+    var spaces = ''
+    for(var i = count; i >= 1; i--){
+      spaces += '&nbsp;'
+    }
+    vaporIpsum = vaporIpsum.split('').join(spaces).split('$').join('<br><br>')
+
+    $( '#ipsum' ).html(spaces + vaporIpsum)
   }
 })
