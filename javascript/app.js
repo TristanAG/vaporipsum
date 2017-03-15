@@ -1,5 +1,4 @@
 $( 'document' ).ready( function(){
-
   vaporIpsum = ''
   vaporReference = ''
   buttonsAreActive = false
@@ -77,7 +76,6 @@ $( 'document' ).ready( function(){
 
     while (m) {
       i = Math.floor(Math.random() * m--)
-
       t = array[m]
       array[m] = array[i]
       array[i] = t
@@ -87,7 +85,6 @@ $( 'document' ).ready( function(){
   }
 
   function alterSpacing(){
-
     vaporIpsum = vaporReference.split('<br><br>').join('$')
     var spaces = ''
     for(var i = count; i >= 1; i--){
